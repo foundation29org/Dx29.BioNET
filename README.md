@@ -37,7 +37,7 @@ This project doesn’t have any dependency and doesn’t need any secret value.
 
 ####  2. Download and installation
 
-DDownload the repository code with `git clone` or use download button.
+Download the repository code with `git clone` or use download button.
 
 We use [Visual Studio 2019](https://docs.microsoft.com/en-GB/visualstudio/ide/quickstart-aspnet-core?view=vs-2022) for working with this project.
 
@@ -45,18 +45,20 @@ We use [Visual Studio 2019](https://docs.microsoft.com/en-GB/visualstudio/ide/qu
 
 ####  3. Latest releases
 
-The latest release of the project deployed in the [Dx29 application](https://dx29.ai/) is: v0.15.00.
+The latest release of the project deployed in the [Dx29 application](https://dx29.ai/) is: v0.15.01.
 
 <p>&nbsp;</p>
 
 #### 4. API references
 
->- Diagnosis **with symptoms and genes**: Baseline request: ``` api/v1/Diagnosis/ ```
+>- Diagnosis **with symptoms and genes**: 
 >>- Describe: To obtain information on diseases from a list of IDs and in a given language.
->>>- GET request: ```api/v1/Diagnosis/describe?ids=<List<string>>&lang=<lang>```
+>>>- GET request
+>>>- URL: ```http://localhost/api/v1/Diagnosis/describe?ids=<List<string>>&lang=<lang>```
 >>>- Result: Dictionary with the diseases ids requested as keys, and the value is an object with the information of each disease: Id, Name and Description.
 >>- Calculate: To get the list of Dx29 suggested diseases for a patient from his symptoms and/or genes
->>>- POST request: ```api/v1/Diagnosis/calculate?lang=<lang>&source=<source>&count=<number of results>```
+>>>- POST request
+>>>- URL: ```http://localhost/api/v1/Diagnosis/calculate?lang=<lang>&source=<source>&count=<number of results>```
 >>>- Body request: DataAnalysis object with the items extracted of the result of the Exomiser execution on the genotype files of the patient (VCFs):
 >>>>- symptoms. List of symptoms identifiers (strings).
 >>>>- Genes. List of gene items:
@@ -74,12 +76,14 @@ The latest release of the project deployed in the [Dx29 application](https://dx2
 >>>>- Symptoms: The differential diagnosis between disease symptoms and patient symptoms. Is a list of objects with the information of: frecuency of the symptom, if the patient and the disease has it (booleans), if has any related symptom and its relationship.
 >>>>- Matches genes. A list of objects with the label of the genes that has de patient and the disease in common.
 >>- Phrank: To get the list of Phrank suggested diseases for a patient from his symptoms 
->>>- POST request: ```api/v1/Diagnosis/phrank?lang=<lang>&source=<source>&count=<number of results>```
+>>>- POST request
+>>>- URL: ```http://localhost/api/v1/Diagnosis/phrank?lang=<lang>&source=<source>&count=<number of results>```
 >>>- Body request: The same as the previous method (calculate with Dx29 algorithm).
 >>>- Results: The same as the previous method (calculate with Dx29 algorithm).
->- Diagnosis **ONLY with symptoms**: Baseline request: ``` api/v1/Search/ ```
+>- Diagnosis **ONLY with symptoms**: 
 >>- Wihout path: To get the list of Dx29 suggested diseases for a patient ONLY from his symptoms and with another format results
->>>- POST request: ``` api/v1/Search?skip<int>&count=<int>&lang=<lang>&source=<source> ```
+>>>- POST request
+>>>- URL: ```http://localhost/api/v1/Search?skip<int>&count=<int>&lang=<lang>&source=<source> ```
 >>>- Body request: The same as the previous methods for calculate with Dx29 algorithm or Phrank algorithm.
 >>>- Result: Object with the information about Count, total and BestTotal integers and a list of diseases information objects with:
 >>>>- The Id, Name and description of the disease
