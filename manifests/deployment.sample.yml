@@ -1,0 +1,25 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: <deployment-name>
+  namespace: <namespace>
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: <deployment-name>
+  template:
+    metadata:
+      labels:
+        app: <deployment-name>
+    spec:
+      containers:
+        - name: <deployment-name>
+          image: <acr_server/dx29bionet
+          ports:
+          - containerPort: 80
+          resources:
+            requests:
+              memory: "1.25Gi"
+            limits:
+              memory: "1.50Gi"
