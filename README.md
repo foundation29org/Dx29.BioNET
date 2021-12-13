@@ -32,7 +32,7 @@ It is programmed in C#, and the structure of the project is as follows:
 ####  1. Configuration: Pre-requisites
 
 This project uses:
->- The Human Phenotype Ontology. Find out more at [http://www.human-phenotype-ontology.org]([http://www.human-phenotype-ontology.org)
+>- The Human Phenotype Ontology. Find out more at [http://www.human-phenotype-ontology.org](http://www.human-phenotype-ontology.org)
 >- MONDO. Find out more at [https://github.com/monarch-initiative/mondo](https://github.com/monarch-initiative/mondo)
 >- ORPHANET. Find out more at: [http://www.orphadata.org/cgi-bin/index.php](http://www.orphadata.org/cgi-bin/index.php)
 >- OMIM. Find out more at: [https://www.omim.org/](https://www.omim.org/)
