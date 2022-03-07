@@ -160,6 +160,11 @@ In general, we follow the "fork-and-pull" Git workflow.
 
 The project is licenced under the **(TODO: LICENCE & LINK & Brief explanation)**
 
+	
+### **Acknowledgements**
+
+This repository includes resources from the Human Phenotype Ontology consortium [https://hpo.jax.org/](https://hpo.jax.org/). Refer to the following publication for up-to date information: S. Köhler et al., The Human Phenotype Ontology in 2021, Nucleic Acids Research, Volume 49, Issue D1, 8 January 2021, Pages D1207–D1217, [https://doi.org/10.1093/nar/gkaa1043](https://doi.org/10.1093/nar/gkaa1043)
+
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
